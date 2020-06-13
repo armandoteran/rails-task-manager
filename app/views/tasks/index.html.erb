@@ -1,0 +1,18 @@
+
+<div class="tasks-box">
+  <h1>Tasks</h1>
+  <% @tasks.each do |task| %>
+    <!--condition -->
+    <div class="task-flex">
+
+      <% if task.completed %>
+        <p> <i class="fa fa-check-square-o" aria-hidden="true"></i> </p>
+      <% else %>
+        <p> <i class="far fa-square"></i> </p>
+      <% end %>
+
+      <p><%= link_to task.name, task_path(task) %></p>
+
+    </div>
+  <% end %>
+</div>
