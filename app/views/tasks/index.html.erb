@@ -1,5 +1,6 @@
 
-<div class="tasks-box">
+<div class="content-div">
+
   <h1>Tasks</h1>
   <% @tasks.each do |task| %>
     <!--condition -->
@@ -12,7 +13,14 @@
       <% end %>
 
       <p><%= link_to task.name, task_path(task) %></p>
-
     </div>
   <% end %>
+
 </div>
+
+<div class="link-div">
+  <p>
+    <%= link_to "+ Add new task", new_path %>
+  </p>
+</div>
+
